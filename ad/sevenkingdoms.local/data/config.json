@@ -21,6 +21,24 @@
             "scripts" : ["sidhistory.ps1"],
             "vulns" : []
         },
+        "att01" : {
+            "hostname" : "attacker01",
+            "type" : "server",
+            "local_admin_password": "8dCT-DJjgScp",
+            "domain" : "north.sevenkingdoms.local",
+            "path" : "DC=north,DC=sevenkingdoms,DC=local",
+            "local_groups" : {
+                "Administrators" : [
+                    "north\\eddard.stark",
+                    "north\\catelyn.stark",
+                    "north\\robb.stark"
+                ],
+                "Remote Desktop Users" : [
+                    "north\\Stark"
+                ]
+            },
+            "vulns" : []
+        },
         "srv01" : {
             "hostname" : "casterlyrock",
             "type" : "server",
