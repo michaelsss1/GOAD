@@ -1,8 +1,8 @@
 Vagrant.configure("2") do |config|
 
 # Uncomment this depending on the provider you want to use
-ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
-# ENV['VAGRANT_DEFAULT_PROVIDER'] = 'vmware_desktop'
+# ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
+ENV['VAGRANT_DEFAULT_PROVIDER'] = 'vmware_desktop'
 
 boxes = [
   # windows server 2022 : don't work for now
@@ -19,6 +19,8 @@ boxes = [
   { :name => "SRV02", :ip => "192.168.56.22", :box => "StefanScherer/windows_2019", :box_version => "2020.07.17", :os => "windows"},
   # windows server 2016
   { :name => "SRV03", :ip => "192.168.56.23", :box => "StefanScherer/windows_2016", :box_version => "2019.02.14", :os => "windows"}
+  # initial access machine
+  { :name => "ATT01", :ip => "192.168.56.24", :box => "StefanScherer/windows_2019", :box_version => "2021.05.15", :os => "windows"}
   # ELK
 # { :name => "elk", :ip => "192.168.56.50", :box => "bento/ubuntu-18.04", :os => "linux",
 #   :forwarded_port => [
