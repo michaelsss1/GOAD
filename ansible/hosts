@@ -3,12 +3,12 @@
 domain_name=sevenkingdoms.local
 
 ; adapter created by vagrant and virtualbox (comment if you use vmware)
-nat_adapter=Ethernet
-domain_adapter=Ethernet 2
+; nat_adapter=Ethernet
+; domain_adapter=Ethernet 2
 
 ; adapter created by vagrant and vmware (uncomment if you use vmware)
-; nat_adapter=Ethernet0
-; domain_adapter=Ethernet1
+nat_adapter=Ethernet0
+domain_adapter=Ethernet1
 
 ansible_user=vagrant
 ansible_password=vagrant
@@ -42,6 +42,12 @@ dns_domain=192.168.56.11
 dict_key=srv02
 [srv02]
 192.168.56.22
+
+[att01:var]
+dns_domain=192.168.56.11
+dict_key=att01
+[att01]
+192.168.56.24
 
 ; ------------------------------------------------
 ; essos.local
